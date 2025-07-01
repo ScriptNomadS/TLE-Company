@@ -396,3 +396,41 @@
   height: 16.25vw;
   margin-top: -50px;
 }
+
+
+@media (max-width: 768px) {
+  .image-box {
+    margin-top: -170px;
+    margin-right: -37px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-text {
+    padding-left: -100px;
+  }
+}
+
+
+
+
+/* .services-intro {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.services-intro video.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.65;
+}
+ */
