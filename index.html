@@ -579,16 +579,15 @@
     <div class="container">
   
       <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
-          <span class="icon icon-bar"></span>
+        <button class="navbar-toggle" id="burger-button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
         <a href="#main" class="navbar-brand">
           <img src="image/LOGO.png" class="header__img" alt="Логотип">
         </a>
       </div>
-  
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-nav-first">
           <li><a href="#main" class="smoothScroll">Головна</a></li>
@@ -613,8 +612,14 @@
       </p>
     </section>
 
-    <section class="container-fluid services-intro"
-         style="background-image: url('https://vedstar.com/wp-content/uploads/2019/09/ekspedirovanie-gruzov-zatemnena.jpg');">
+
+
+    <!-- style="background-image: url('https://vedstar.com/wp-content/uploads/2019/09/ekspedirovanie-gruzov-zatemnena.jpg');" -->
+    <section class="container-fluid services-intro">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="image/Header-video.mp4" type="video/mp4">
+        Ваш браузер не підтримує відео.
+      </video>
       <div class="row">
         <div class="services-intro__wrapper d-flex flex-wrap ">
           <br />
@@ -675,14 +680,24 @@
           </div>
           <!--<div class="col-lg-6 d-none d-lg-flex intro-form">-->
           <div class="offset-lg-2 col-lg-4 d-none d-lg-flex intro-form">
-
-            <form style="border-radius: 10px !important;">
-
-              <div class="title" style="margin: 0;
-              padding: 10px;">
-                <h2> Замовити розрахунок вартості перевезення</h2>
-                </br>
-
+            
+            <div class="form-container">
+              <div class="form-box">
+                <img src="image/Header-car.png" alt="Truck" class="form-truck">
+                <p class="form-text" style="font-size: 20px;">
+                  Залиште заявку, і ми обов’язково зв’яжемося з вами для детальної консультації.
+                </p>
+                <form id="contact-form">
+                  <input type="text" name="name" placeholder="Ім'я*" required>
+                  <input type="text" name="phone" placeholder="Телефон*" required>
+                  <button type="submit">Відправити</button>
+                </form>
+              </div>
+            </div>
+            
+            
+                <!-- блок для ответа PHP -->
+                <div id="response" class="msg"></div>
               </div>
 
               <div class="custom-ninja-form">
@@ -769,19 +784,7 @@
                 </style>
 
                 <!-- Текст над формой -->
-                <p style="text-align: center; font-size: 16px; margin-bottom: 12px;">
-                  Заповніть і надішліть, будь ласка, форму, <br>ми зв'яжемося з Вами одразу, як тільки отримаємо майл
-                </p>
-
-                <!-- Ninja Forms шорткод -->
-                <!-- <noscript class="ninja-forms-noscript-message">
-                  Пам’ятайте: для цього вмісту потрібен JavaScript.</noscript>
-                <div id="nf-form-9_2-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-9_2"
-                  aria-describedby="nf-form-errors-9_2" role="form">
-
-                  <div class="nf-loading-spinner"></div> -->
-                  <a style="color: orangered; display: flex; text-align: center; margin-left: 50px; font-size: 20px; font-weight: bold;" href="https://mail.google.com/mail/?view=cm&fs=1&to=transportation.tle@gmail.com&su=Надсилання Заявки%20&body=Доброго%20дня!%0A%0AХотів%20би%20записатися%20на%20консультацію%20з%20[вкажіть%20тему%20консультації].%20Будь%20ласка,%20повідомте,%20коли%20є%20вільні%20слоти%20для%20запису.%0A%0A↓↓↓↓%20Введіть%20свої%20дані%20внизу%20↓↓↓↓%0A%0AВаша%20додаткова%20інформація:%0A%0AВаші%20дані:%0A[Ваш%20ПІБ]%0A[Ваші%20контактні%20дані]">Замовити розрахунок</a>
-
+             
 
                 </div>
                 <!-- That data is being printed as a workaround to page builders reordering the order of the scripts loaded-->
@@ -826,7 +829,7 @@
 
     <section id="about-us" class="customs-clearance container-fluid">
       <br><br><br><br><br>
-      <h1 class="has-text-align-center" style="font-size:30px; ">Ласкаво просимо до експедиторської компанії</h1>
+      <h1 class="has-text-align-center" style="font-size:30px; color: #1f317d">Ласкаво просимо до експедиторської компанії</h1>
       <p class="has-text-align-center about-us-text" style="font-size:20px; color: grey">Ми спеціалізуємося на
         організації регіональних перевезень, гарантуючи ефективність, пунктуальність та індивідуальний підхід до кожного
         клієнта. <br> Ми добре розуміємо специфіку локального ринку й будуємо логістику так, щоб вона відповідала реальним
@@ -844,66 +847,35 @@
       </div>
       <div class="wp-block-uagb-container uagb-block-d63eb3ec alignfull uagb-is-root-container">
         <div class="uagb-container-inner-blocks-wrap">
-          <div class="wp-block-uagb-container uagb-block-d6cc6df9">
-            <div
-              class="wp-block-uagb-info-box uagb-block-01182231 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
-              <div class="uagb-ifb-content">
-                <div class="uagb-ifb-title-wrap">
-                  <h3 class="uagb-ifb-title"><mark style="background-color:rgba(0, 0, 0, 0); color: #1f317d"
-                      class="has-inline-color has-ast-global-color-0-color">Надійність, перевірена часом</mark>
-                  </h3>
-                </div>
-                <div class="uagb-ifb-separator"></div>
-                <p class="uagb-ifb-desc">Ми відповідально ставимось до кожного перевезення — незалежно від
-                  обсягу вантажу чи напрямку доставки. Наші клієнти знають: якщо TLE взялася за логістику,
-                  усе буде доставлено вчасно, безпечно та у чітко обумовлені терміни. Надійність — це не просто слово,
-                  це принцип, за яким ми працюємо щодня.<br>
-                </p>
-              </div>
+          <div class="info-section">
+            <div class="info-box">
+              <div class="background-number">1</div>
+              <h3>Надійність, перевірена часом</h3>
+              <div class="line"></div>
+              <p>Ми відповідально ставимось до кожного перевезення — незалежно від обсягу вантажу чи напрямку доставки. Наші клієнти знають: якщо TLE взялася за логістику, усе буде доставлено вчасно, безпечно та у чітко обумовлені терміни. Надійність — це не просто слово, це принцип, за яким ми працюємо щодня.</p>
+            </div>
+          
+            <div class="info-box">
+              <div class="background-number">2</div>
+              <h3>Індивідуальний підхід і турбота про клієнта</h3>
+              <div class="line"></div>
+              <p>У кожного бізнесу — свої потреби. Саме тому ми не пропонуємо шаблонних рішень. Ми слухаємо, аналізуємо та створюємо логістичні маршрути з урахуванням особливостей саме вашої діяльності. Для нас важливо, щоб співпраця з нами була зручною, простою та вигідною саме для вас.</p>
+            </div>
+          
+            <div class="info-box">
+              <div class="background-number">3</div>
+              <h3>Швидке реагування та гнучкість</h3>
+              <div class="line"></div>
+              <p>Ми завжди на зв’язку й готові оперативно реагувати на зміну обставин або нові запити. Гнучкість у плануванні маршрутів і рішень дозволяє нам залишатися ефективними навіть у нестандартних ситуаціях. З нами ви впевнені: логістика працює на вас, а не навпаки.</p>
             </div>
           </div>
-          <div class="wp-block-uagb-container uagb-block-338db038">
-            <div
-              class="wp-block-uagb-info-box uagb-block-592d3eda uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
-              <div class="uagb-ifb-content">
-                <div class="uagb-ifb-title-wrap">
-                  <h3 class="uagb-ifb-title"><mark style="background-color:rgba(0, 0, 0, 0); color: #1f317d"
-                      class="has-inline-color has-ast-global-color-0-color">Індивідуальний підхід і турбота про
-                      клієнта</mark>
-                  </h3>
-                </div>
-                <div class="uagb-ifb-separator"></div>
-                <p class="uagb-ifb-desc">У кожного бізнесу — свої потреби. Саме тому ми не пропонуємо шаблонних рішень.
-                  Ми слухаємо, аналізуємо та створюємо логістичні маршрути з урахуванням особливостей саме вашої
-                  діяльності.
-                  Для нас важливо, щоб співпраця з нами була зручною, простою та вигідною саме для вас.<br></p>
-              </div>
-            </div>
-          </div>
-          <div class="wp-block-uagb-container uagb-block-0dbbd598">
-            <div
-              class="wp-block-uagb-info-box uagb-block-6f9c8f07 uagb-infobox__content-wrap  uagb-infobox-icon-above-title uagb-infobox-image-valign-top">
-              <div class="uagb-ifb-content">
-                <div class="uagb-ifb-title-wrap">
-                  <h3 class="uagb-ifb-title"><mark style="background-color:rgba(0, 0, 0, 0); color: #1f317d"
-                      class="has-inline-color has-ast-global-color-0-color">Швидке реагування та гнучкість</mark>
-                  </h3>
-                </div>
-                <div class="uagb-ifb-separator"></div>
-                <p class="uagb-ifb-desc">Ми завжди на зв’язку й готові оперативно реагувати на зміну обставин або нові
-                  запити.
-                  Гнучкість у плануванні маршрутів і рішень дозволяє нам залишатися ефективними навіть у нестандартних
-                  ситуаціях.
-                  З нами ви впевнені: логістика працює на вас, а не навпаки.</p>
-              </div>
-            </div>
           </div>
     </section>
 
     <section id="features" class="what-you-take  container-fluid" style="background-image: url(image/Features-block.png);">
       <div class="row">
         <div class="title">
-          <h2>Як ми експедируємо вантажі</h2>
+          <h2 class="features-main">Як ми експедируємо вантажі</h2>
         </div>
         <div class="what-you-take__carusel  dots-top-left--black">
           <div class="what-you-take__item shadow">
@@ -968,7 +940,7 @@
             <a href="#"><i class="fas fa-chevron-left"></i></a>
           </div>
           <div class="arrows__next shadow">
-            <a href="#"><i class="fas fa-chevro-right"></i></a>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
 
@@ -982,17 +954,18 @@
           <h3>
             Залиште заявку, і ми обов’язково зв’яжемося з вами для детальної консультації.
           </h3>
-          <button class="contact-us-button"><a style="color: #fff; display: flex; text-align: center; font-size: 20px; font-weight: bold;" href="https://mail.google.com/mail/?view=cm&fs=1&to=transportation.tle@gmail.com&su=Надсилання Заявки%20&body=Доброго%20дня!%0A%0AХотів%20би%20записатися%20на%20консультацію%20з%20[вкажіть%20тему%20консультації].%20Будь%20ласка,%20повідомте,%20коли%20є%20вільні%20слоти%20для%20запису.%0A%0A↓↓↓↓%20Введіть%20свої%20дані%20внизу%20↓↓↓↓%0A%0AВаша%20додаткова%20інформація:%0A%0AВаші%20дані:%0A[Ваш%20ПІБ]%0A[Ваші%20контактні%20дані]">Зв'язатись з менеджером</a>
-          </button>
-          <noscript class="ninja-forms-noscript-message">
-            Пам’ятайте: для цього вмісту потрібен JavaScript.</noscript>
+          <form id="lead-form" style="margin-top: 100px;">
+            <input type="text" name="name" placeholder="Ім'я*" required />
+            <input type="text" name="phone" placeholder="Телефон*" required />
+            <button type="submit">Відправити</button>
+          </form>
           <div id="nf-form-11-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-11"
             aria-describedby="nf-form-errors-11" role="form">
 
             <div class="nf-loading-spinner"></div>
 
           </div>  
-          <div class="form-links">
+          <div class="form-links" style="margin-top: -200px; !important">
             <span><b><br />
                 Дізнайтеся більше <a style="color: orangered;" href="#features" target="_blank" rel="noopener">про наші
                   послуги</a><br />
@@ -1007,96 +980,70 @@
 
 
   <footer id="footer">
-    <div class="container-fluid footer__top-part">
-      <div class="row">
-        <div class="col-12 col-lg-2 logo-and-social">
-          <div class="logo">
-            <div class="logo__wrapper">
-              <a href="#main">
-                <img src="image/LOGO.png" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="social">
-            <ul>
-              <li>
-                <a href="#">
-                  <img
-                    src="https://vedstar.com/wp-content/themes/vedstar/html_templates/build//assets/img/icon__facebook.png"
-                    alt="Facebook">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="https://vedstar.com/wp-content/themes/vedstar/html_templates/build//assets/img/icon__instagram.png"
-                    alt="Facebook">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="https://vedstar.com/wp-content/themes/vedstar/html_templates/build//assets/img/telegram2.png"
-                    alt="Facebook">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="https://vedstar.com/wp-content/themes/vedstar/html_templates/build//assets/img/icon__youtube.png"
-                    alt="Facebook">
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7">
-          <nav>
-            <ul id="menu-footer-menu-ua" class="d-flex">
-              <li id="menu-item-1294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1294" style="color: #fff;">
-                <a class="footer-links"
-                  href="#about-us">Про нас</a></li>
-              <li id="menu-item-4555" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4555" style="color: #fff;">
-                <a class="footer-links"
-                  href="#features">Наші послуги</a></li>
-              <li id="menu-item-1295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1295" style="color: #fff;">
-                <a class="footer-links"
-                  href="#contact-us">Корисна інформація</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="col-12 col-lg-3 links">
-          <ul>
-            <li>
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:info@vedstar.com">
-                transportation.tle@gmail.com </a>
-            </li>
-            <li>
-              <i class="fa-brands fa-microsoft"></i>
-              <a href="mailto:info@vedstar.com">
-                transportation.tle@gmail.com </a>
-            </li>
-            <li style="margin-right: 55px;">
-              <i class='fab fa-viber' style='font-size:15px'></i>
-              <a href="+380689459557">
-                +38 (068) 945 95 57</a>
-            </li>
-            <li style="margin-right: 55px;">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <a href="+380689459557">
-                +38 (068) 945 95 57</a>
-            </li>
-          </ul>
-        </div>
+    <div class="footer-logo">
+      <img src="image/LOGO.png" alt="TLE Logo">
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Навігація</h4>
+        <p><a href="#main">Головна</a></p>
+        <p><a href="#about-us">Про нас</a></p>
+        <p><a href="#features">Послуги</a></p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Інформація</h4>
+        <p><a href="#">Конфіденційність</a></p>
+        <p><a href="privacyPolicy.html">FAQ</a></p>
+        <p><a href="">Умови користування</a></p>
+        <p><a href="">Вакансії</a></p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Контакти</h4>
+        <p><img src="image/viber-removebg-preview.png" class="icon"> +380689459557</p>
+        <p><img src="image/teams-removebg-preview.png" class="icon"> transportation.tle@gmail.com</p>
+        <p><img src="image/gmail-removebg-preview.png" class="icon"> transportation.tle@gmail.com</p>
+        <p><img src="image/whatsapp-removebg-preview.png" class="icon"> +380689459557</p>
       </div>
     </div>
-    <div class="container-fluid footer__bottom-part">
-      <div class="row justify-content-center">
-        <p>TLE — Transport. Logistics. Expedition. Ми — експедиційна компанія, що спеціалізується на організації вантажних перевезень та логістичних рішень для бізнесу. Забезпечуємо повний супровід доставки: від планування маршруту до документального оформлення і моніторингу в реальному часі. Працюємо з вантажами будь-якої складності, забезпечуючи точність, безпеку та своєчасність кожного перевезення. Ми об'єднуємо досвід, цифрові інструменти та клієнтоорієнтований підхід, щоб зробити логістику простою, прозорою і вигідною для кожного нашого партнера.</p>
+    <hr>
+  
+    <div class="footer-socials">
+      <a href="#"><img src="image/telegram-removebg-preview.png" alt="Telegram"></a>
+      <a href="#"><img src="image/instagram-removebg-preview.png" alt="Instagram"></a>
+      <a href="#"><img src="image/facebook-removebg-preview.png" alt="Facebook"></a>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 TLE</p>
+      <p>
+    </div>
+
+    <div class="footer-description">
+      <div class="footer-text left">
+        <p>
+          TLE — Transport. Logistics. Expedition. Ми — експедиційна компанія, що спеціалізується на організації вантажних перевезень та логістичних рішень для бізнесу.
+          Забезпечуємо повний супровід доставки: від планування маршруту до документального оформлення і моніторингу в реальному часі.
+          Працюємо з вантажами будь-якої складності, забезпечуючи точність, безпеку та своєчасність кожного перевезення.
+          Ми об’єднуємо досвід, цифрові інструменти та клієнтоорієнтований підхід, щоб зробити логістику простою, прозорою і вигідною для кожного нашого партнера.
+        </p>
+      </div>
+    
+      <div class="footer-text right">
+        <p>
+          Наша мета – бути надійним ланцюгом у структурі вашого бізнесу.
+          Компанія TLE надає послуги з експедиційного обслуговування, організовує внутрішні та міжнародні перевезення, оптимізує витрати та пропонує гнучкі рішення під кожного клієнта.
+          Ви залишаєте заявку – ми аналізуємо потреби, формуємо оптимальну логістичну модель і запускаємо реалізацію.
+          Наші менеджери супроводжують вас на всіх етапах доставки, гарантують стабільність, постійну комунікацію та результат.
+          Ми не беремо жодних прихованих комісій і завжди працюємо на довгострокове партнерство та розвиток вашого бізнесу.
+        </p>
       </div>
     </div>
   </footer>
+  
+  
   <script>
     document.addEventListener('wpcf7mailsent', function (event) {
       location = 'https://vedstar.com/success/'
@@ -1435,6 +1382,68 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("ydwxrsCsoyCS2xv3T");
+
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    emailjs.sendForm('service_jt4omyv','template_0rjbryp', this)
+      .then(() => alert('Форма надіслана!'))
+      .catch(err => alert('Помилка: ' + err.text));
+  });
+</script>
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Ініціалізація EmailJS
+    emailjs.init("ydwxrsCsoyCS2xv3T"); // 🔁 Встав сюди свій public key
+
+    const form = document.getElementById('lead-form');
+    const btn  = form.querySelector('button');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      btn.disabled = true;
+
+      emailjs.sendForm(
+        'service_jt4omyv',   // 🔁 Твій service ID
+        'template_0rjbryp',  // 🔁 Твій template ID
+        this
+      )
+      .then(() => {
+        alert("Заявка надіслана!");
+        form.reset();
+      })
+      .catch((err) => {
+        alert("Помилка: " + err.text);
+      })
+      .finally(() => {
+        btn.disabled = false;
+      });
+    });
+  });
+</script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.navbar-toggle');
+    const collapse = document.querySelector('.navbar-collapse');
+
+    if (!toggle || !collapse) return;
+
+    toggle.addEventListener('click', () => {
+      collapse.classList.toggle('open');
+    });
+  });
+</script>
 </body>
 
 </html>
