@@ -177,7 +177,7 @@
   /* ↓ зробили меншим, змінюй цифру за потреби */
   height: auto;
   object-fit: contain;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 .custom-navbar .navbar-brand {
@@ -269,6 +269,7 @@ img .custom-navbar .navbar-brand {
   background: #1f317d;
   border-color: transparent;
 }
+
 
 /* @media(min-width:768px) {
   .custom-navbar {
@@ -483,6 +484,17 @@ img .custom-navbar .navbar-brand {
   opacity: 0.65;
 }
 
+.services-intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1.1); 
+  z-index: -1; 
+} 
+
 
 
 
@@ -593,7 +605,7 @@ footer {
 
 @media (max-width: 2560px) {
   .features-main {
-    margin-left: -400px;
+    margin-left: -10px;
   }
 }
 
@@ -617,7 +629,7 @@ footer {
 .info-box {
   position: relative;
   width: 330px;
-  background: white;
+  background: #f0f5fa;
   padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -699,12 +711,15 @@ footer {
 
 input[type=text] {
   width: 100%;
-  padding: 18px 15px;
+  padding: 14px 12px;
   font-size: 15px;
-  border: 1px solid #cfd4db;
+  border: 1px solid grey;
   border-radius: 6px;
-  transition: border-color .2s
+  transition: border-color .2s;
+  box-sizing: border-box;
+  margin: 0 0 20 0;
 }
+
 
 input[type=text]:focus {
   border-color: #7aa6ff;
@@ -725,88 +740,108 @@ input[type=text]:focus {
 
 /*―― КНОПКА ――*/
 button {
-  width: 90%;
+  width: 100%;
   display: block;
   margin: 0 auto;
   border: none;
-  border-radius: 6px;
-  padding: 17px 0;
-  background: #f7795e;
+  border-radius: 8px;
+  padding: 16px 0;
+  background: #f7795e; 
   color: #fff;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: opacity .2s
+  text-align: center;
+  transition: opacity 0.2s ease;
 }
 
 button:hover {
-  opacity: .9
+  opacity: 0.9;
+  background: #f7795e;
 }
 
 button:disabled {
-  opacity: .55;
-  cursor: not-allowed
+  background: #f7795e;  /* Не змінюємо колір */
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 
 
 
 
-  .form-container {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    z-index: 1000;
-  }
+.form-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  padding: 40px;
+  margin-top: -150px;
+}
 
-  .form-box {
-    position: relative;
-    background: #fff;
-    padding: 80px 30px 30px;
-    width: 300px;
-    border-radius: 25px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2);
-    text-align: center;
-  }
+.form-box {
+  width: 460px; /* Було менше, тепер більше */
+  background: #fff;
+  padding: 30px 20px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: relative;
+  padding-top: 80px; /* Щоб форма не перекривала зображення */
+  overflow: visible;
+}
 
-  .form-truck {
-    position: absolute;
-    top: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1;
-  }
+.form-truck {
+  width: 150px; /* Збільшено розмір машини */
+  display: block;
+  margin: -60px auto 10px;
+  position: absolute;
+  top: -100px; /* виводимо зображення вище форми */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* розмір можна підкоригувати */
+  z-index: 2;
+}
 
-  .form-text {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #333;
-  }
+.form-text {
+  font-size: 22px; /* Збільшено */
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-  form input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    font-size: 14px;
-  }
+#contact-form input[type="text"] {
+  width: 100%;
+  padding: 18px 16px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 
-  form button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 25px;
-    background: #FF6D5B;
-    color: #fff;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-  }
+#contact-form button {
+  display: block;
+  width: 90%;           /* або 100% для повної ширини */
+  margin: 0 auto;       /* центрує кнопку */
+  background: #f7795e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 17px 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#contact-form button:hover {
+  opacity: 0.9;
+}
 
 
-  
+
+.footer-links {
+  color: #fff;
+}
+
+.footer-links:hover {
+  color: orangered;
+}
